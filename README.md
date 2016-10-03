@@ -67,7 +67,6 @@ fading.css('opacity', opacity);
     'opacity': ((height - (scrollTop)) / (height - 200))
 });```  
 
-
 * We want `fourFade` to fade at a different rate than `creds`, `fading`, and `twoFade`, so we'll make an opacity calculation using `height`, `scrollTop`, and a number of our choosing (in this case, 400):  
 ```fourFade.css({
     'opacity': ((height - (scrollTop)) / (height - 400))
