@@ -59,10 +59,11 @@ showHideCreds = 0;
 
   * Change opacity property on `creds` var to value of `showHideCreds` var:  
 `creds.css('opacity', showHideCreds);`  
-  * Change opacity property on fading var to value of opacity var
-fading.css('opacity', opacity);
+  * Change opacity property on `fading` var to value of `opacity` var:  
+`fading.css('opacity', opacity);`  
 
 * We want `twoFade` to fade at a different rate than `creds`, `fading`, and `fourFade`, so we'll make an opacity calculation using `height`, `scrollTop`, and a number of our choosing (in this case, 200):  
+
 ```twoFade.css({
     'opacity': ((height - (scrollTop)) / (height - 200))
 });```  
