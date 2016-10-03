@@ -41,19 +41,23 @@
 `var showHideCreds = 1;`
 
 * Check if offset is less than or equal to **fadeStart**. If so:  
-```if (offset <= fadeStart) {
+```javascript
+if (offset <= fadeStart) {
 // Toggle values of opacity and showHideCreds vars
-opacity = 1;
-showHideCreds = 0;
-}``` 
+	opacity = 1;
+	showHideCreds = 0;
+}
+```  
 
 * Check if offset is less than or equal to **fadeUntil**. If so:  
-```else if (offset <= fadeUntil) {
+```javascript  
+else if (offset <= fadeUntil) {
     // Set values of opacity and showHideCreds vars w/
     // calculation that uses offset and fadeUntil
     opacity = 1 - offset / fadeUntil;
     showHideCreds = offset / fadeUntil;
-}```
+}
+```  
 
 * Now that the `offset` && `fadeStart` && `fadeUntil` values have been calculated, we'll make CSS changes using those vars:  
 
@@ -63,17 +67,24 @@ showHideCreds = 0;
 `fading.css('opacity', opacity);`  
 
 * We want `twoFade` to fade at a different rate than `creds`, `fading`, and `fourFade`, so we'll make an opacity calculation using `height`, `scrollTop`, and a number of our choosing (in this case, 200):  
-
-```twoFade.css({
+```
+twoFade.css({
     'opacity': ((height - (scrollTop)) / (height - 200))
-});```  
+});
+```  
 
 * We want `fourFade` to fade at a different rate than `creds`, `fading`, and `twoFade`, so we'll make an opacity calculation using `height`, `scrollTop`, and a number of our choosing (in this case, 400):  
-```fourFade.css({
+```
+fourFade.css({
     'opacity': ((height - (scrollTop)) / (height - 400))
-});```  
+});
+```  
 
 * We want `.color-overlay` to fade at a different rate than all the other fading elements, so we'll make another opacity calculation using `height` & `scrollTop`:  
-```$('.color-overlay').css({
+```
+$('.color-overlay').css({
     'opacity': ((height - scrollTop) / height)
-});```  
+});
+```   
+
+
